@@ -10,7 +10,7 @@ python -m mypy_boto3
 make typings
 ```
 
-When checking [ec2.py](ec2.py) pyright takes > 20 secs:
+When checking [ec2.py](ec2.py) pyright takes ~7 secs:
 
 ```
 $ pyright --version
@@ -25,13 +25,13 @@ Auto-excluding **/__pycache__
 Auto-excluding .git
 The useLibraryCodeForTypes has been specified in both the config file and a command-line option. The value in the config file (false) will take precedence
 Searching for source files
-Found 14 source files
-0 errors, 0 warnings
-Completed in 23.731sec
-pyright  39.58s user 5.38s system 187% cpu 23.921 total
+Found 1 source file
+0 errors, 0 warnings 
+Completed in 6.091sec
+pyright  9.80s user 1.41s system 181% cpu 6.181 total
 ```
 
-Remove _type_defs.pyi_ and the time drops to ~2 sec:
+Remove _type_defs.pyi_ and the time drops to ~1 sec:
 
 ```
 $ rm typings/mypy_boto3_ec2/type_defs.pyi
@@ -43,10 +43,10 @@ Auto-excluding **/__pycache__
 Auto-excluding .git
 The useLibraryCodeForTypes has been specified in both the config file and a command-line option. The value in the config file (false) will take precedence
 Searching for source files
-Found 13 source files
-0 errors, 0 warnings
-Completed in 1.93sec
-pyright  2.84s user 0.14s system 148% cpu 2.015 total
+Found 1 source file
+0 errors, 0 warnings 
+Completed in 0.824sec
+pyright  1.05s user 0.09s system 125% cpu 0.910 total
 ```
 
 ## Notes

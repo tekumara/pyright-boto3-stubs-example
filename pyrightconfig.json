@@ -1,7 +1,6 @@
 {
     "include": [
-        "."
+        "ec2.py"
     ],
-    "strictParameterNoneValue": false,
     "useLibraryCodeForTypes": false
 }
