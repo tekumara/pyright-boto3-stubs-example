@@ -30,10 +30,10 @@ Completed in 23.731sec
 pyright  39.58s user 5.38s system 187% cpu 23.921 total
 ```
 
-Remove type_defs.pyi and the time drops to ~2 sec:
+Remove _type_defs.pyi_ and the time drops to ~2 sec:
 
 ```
-rm typings/mypy_boto3_ec2/type_defs.pyi
+$ rm typings/mypy_boto3_ec2/type_defs.pyi
 Loading configuration file at /Users/tekumara/code/pyright-boto3-stubs-example/pyrightconfig.json
 Assuming Python version 3.7
 Assuming Python platform Darwin
