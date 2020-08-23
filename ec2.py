@@ -1,12 +1,8 @@
 from typing import Any, Dict, List, Optional, TypeVar, Union
 
 import boto3
-from mypy_boto3_ec2.type_defs import FilterTypeDef
-
-E = TypeVar("E")
-T = TypeVar("T")
-
 from mypy_boto3_ec2 import Client
+from mypy_boto3_ec2.type_defs import FilterTypeDef
 
 
 def describe(config: Dict[str, Any], name: Optional[str] = None) -> List[Dict[str, Any]]:
@@ -33,6 +29,9 @@ def describe(config: Dict[str, Any], name: Optional[str] = None) -> List[Dict[st
 
     return sorted(instances, key=lambda i: i["State"] + str(i["Name"]))
 
+
+E = TypeVar("E")
+T = TypeVar("T")
 
 def first_or_else(li: List[E], default: T) -> Union[E, T]:
     return li[0] if len(li) > 0 else default
