@@ -1,0 +1,7 @@
+{
+    "include": [
+        "."
+    ],
+    "strictParameterNoneValue": false,
+    "useLibraryCodeForTypes": false
+}
