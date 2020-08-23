@@ -20,6 +20,7 @@ def describe(config: Dict[str, Any], name: Optional[str] = None) -> List[Dict[st
     instances = [
         {
             "State": i["State"]["Name"],
+            "Name": first_or_else([t["Value"] for t in i.get("Tags", []) if t["Key"] == "Name"], None),
             "Type": i["InstanceType"],
             "DnsName": i["PublicDnsName"] if i.get("PublicDnsName", None) != "" else i["PrivateDnsName"],
             "LaunchTime": i["LaunchTime"],
