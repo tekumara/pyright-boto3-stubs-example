@@ -6,6 +6,8 @@ Create and activate a virtualenv, then install the stubs:
 
 ```bash
 pip install 'boto3-stubs[ec2]==1.14.47.0'
+python -m mypy_boto3
+make typings
 ```
 
 When checking [ec2.py](ec2.py) pyright takes > 20 secs:
